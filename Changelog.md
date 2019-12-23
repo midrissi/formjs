@@ -4,8 +4,36 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## 4.8.0-rc.3
+## 4.8.0-rc.6
 ### Fixed
+ - Changed references to Promise and replace them with NativePromise.
+ - Removed component validity checks on non-input nested components.
+
+### Changed
+ - Upgraded @babel/cli@7.7.7, @babel/core@7.7.7, @babel/preset-env@7.7.7, @babel/register@7.7.7, webpack@4.41.4, core-js@3.6.0, eslint@6.8.0
+
+## 4.8.0-rc.5
+### Fixed
+ - Issues with libraries including formiojs getting warnings with Error: Can't resolve 'vm'
+
+## 4.8.0-rc.4
+### Added
+ - A new setting called Modal Edit which allows you to edit any component within a modal.
+ 
+### Fixed
+ - Fixed issue with Number component where empty value for reset was not working.
+
+## 4.8.0-rc.3
+### Changed
+ - Upgrade flatpickr@4.6.3, webpack@4.41.3, fetch-mock@8.1.0, marked@0.8.0
+
+### Fixed
+ - Fixed problem where HTML refreshOnChange was not re-evaluating the whole template and setting it correctly.
+ - Fixed issue where require decimal on Number components was adding 20 decimals to the number.
+ - Fixed single value normalization for Select components.
+ - Fix nested components failing to save because child components are required
+ - Fix issue where textarea saving as json in select component won't allow array values.
+ - Fixed issue where textarea contents would not show in readonly mode.
  - Fix spelling of addMessages.
  - Fix invalid identity escape in numberPattern.
  - Fixed Wizard navigation redraw.
